@@ -1,8 +1,7 @@
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Card : MonoBehaviour, IDragHandler, IEndDragHandler
+public class CardDisplay : MonoBehaviour, IDragHandler, IEndDragHandler
 {
 
     readonly float dragSpeed = 0.1f;

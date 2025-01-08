@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Pack : MonoBehaviour, IPointerClickHandler
+public class PackDisplay : MonoBehaviour, IPointerClickHandler
 {
     Animator anim;
     Slider slider;
