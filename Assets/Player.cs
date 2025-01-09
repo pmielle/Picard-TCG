@@ -7,6 +7,11 @@ public class Player : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (FindObjectsByType<Player>(FindObjectsSortMode.None).Length > 1) 
+        { 
+            Debug.Log("Player already exists: destroying...");
+            Destroy(gameObject);
+        }
         DontDestroyOnLoad(gameObject);
         // load player data
         cards = new() { 1 };
