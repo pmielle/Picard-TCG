@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class MyCards : MonoBehaviour
 {
+
+    public GameObject overlay;
+
     void Start() 
     {
         // assign stuff
@@ -23,7 +26,18 @@ public class MyCards : MonoBehaviour
 
     public void GoToCard(int cardId) {
         Debug.Log($"displaying card #{cardId}");
-        SceneManager.LoadScene("Card");
+        overlay.SetActive(true);
+        var card = Resources.Load("CardDisplay");
+        var cardData = Resources.Load<CardData>(cardId.ToString());
+        var clone = Instantiate(card, overlay.transform);
+        clone.GetComponent<Card>().cardData = cardData;
+        clone.name = "CardDisplay";
+    }
+
+    public void CloseOverlay() {
+        var card = overlay.transform.Find("CardDisplay").gameObject;
+        Destroy(card);
+        overlay.SetActive(false);
     }
 
     public void Close() {

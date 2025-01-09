@@ -10,10 +10,4 @@ public class Card : MonoBehaviour
     {
         transform.Find("Name").GetComponent<TextMeshProUGUI>().text = cardData.name;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
