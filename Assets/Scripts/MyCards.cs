@@ -1,19 +1,28 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MyCards : MonoBehaviour
 {
-    Player player;
     void Start() 
     {
-        player = GameObject.Find("Player").GetComponent<Player>();   
+        // assign stuff
+        var player = GameObject.Find("Player").GetComponent<Player>();  
+        var content = GameObject.Find("Content");
+        // spawn cards
+        var card = Resources.Load("Card");
         foreach (var cardId in player.cards)
         {
-            Debug.Log($"cardId is: {cardId}");
+            var cardData = Resources.Load<CardData>(cardId.ToString());
+            var clone = Instantiate(card, content.transform);
+            clone.GetComponent<Card>().cardData = cardData;
+            clone.GetComponent<Button>().onClick.AddListener(() => GoToCard(cardId));
         }
     }
 
-    public void GoToCard() {
+    public void GoToCard(int cardId) {
+        Debug.Log($"displaying card #{cardId}");
         SceneManager.LoadScene("Card");
     }
 

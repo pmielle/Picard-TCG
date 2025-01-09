@@ -14,6 +14,6 @@ public class Player : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         // load player data
-        cards = new() { 1 };
+        cards = new() { 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
     }
 }
