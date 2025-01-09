@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class OpeningSlider : MonoBehaviour, IPointerUpHandler
 {
     Slider slider;
-    Animator packAnim;
+    GameObject pack;
 
     public void OnPointerUp(PointerEventData eventData)
     {
@@ -15,7 +15,10 @@ public class OpeningSlider : MonoBehaviour, IPointerUpHandler
     public void OnSliderChange() {
         if (slider.value > 99) 
         {
-            packAnim.SetBool("IsOpen", true);
+            pack.GetComponent<Animator>().SetBool("IsOpen", true);
+            // give the new cards to the player
+            var player = GameObject.Find("Player").GetComponent<Player>();  
+            player.cards.AddRange(pack.GetComponent<PackDisplay>().cardIds);
         }
     }
 
@@ -23,6 +26,7 @@ public class OpeningSlider : MonoBehaviour, IPointerUpHandler
     void Start()
     {
         slider = GetComponent<Slider>();
-        packAnim = GameObject.Find("Pack").GetComponent<Animator>();
+        pack = GameObject.Find("Pack");
+
     }
 }

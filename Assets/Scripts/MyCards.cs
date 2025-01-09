@@ -25,7 +25,6 @@ public class MyCards : MonoBehaviour
     }
 
     public void GoToCard(int cardId) {
-        Debug.Log($"displaying card #{cardId}");
         overlay.SetActive(true);
         var card = Resources.Load("CardDisplay");
         var cardData = Resources.Load<CardData>(cardId.ToString());

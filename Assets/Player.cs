@@ -9,11 +9,10 @@ public class Player : MonoBehaviour
     {
         if (FindObjectsByType<Player>(FindObjectsSortMode.None).Length > 1) 
         { 
-            Debug.Log("Player already exists: destroying...");
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
         // load player data
-        cards = new() { 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+        cards = new() { };
     }
 }
