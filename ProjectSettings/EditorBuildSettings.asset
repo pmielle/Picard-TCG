@@ -5,18 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: cf8dafb8d8b064717b9fedad07abdb82
   - enabled: 1
     path: Assets/Scenes/MyCards.unity
     guid: 4b50a7f8a7d44403a93ee158610675b4
-  - enabled: 1
-    path: Assets/Scenes/Card.unity
-    guid: 2db4821921d8b45b4b4da256a86811ab
   - enabled: 1
     path: Assets/Scenes/OpenPack.unity
     guid: 52b0189d71e7f4f84aa5ad0e4ff0a00f

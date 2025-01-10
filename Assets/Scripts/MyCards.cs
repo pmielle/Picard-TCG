@@ -14,7 +14,7 @@ public class MyCards : MonoBehaviour
         var player = GameObject.Find("Player").GetComponent<Player>();  
         var content = GameObject.Find("Content");
         // spawn cards
-        var card = Resources.Load("Card");
+        var card = Resources.Load("CardInList");
         foreach (var cardId in player.cards)
         {
             var cardData = Resources.Load<CardData>(cardId.ToString());
