@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   name: Carte 2
+  price: 4.99
+  quote: Another review quote
+  review: Review - Animi optio libero
+  collection: Collection
+  year: 2025
+  author: Paul M.

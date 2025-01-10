@@ -13,3 +13,10 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   name: Carte 1
+  price: 9.99
+  quote: Review quote
+  review: Review - Animi optio libero tempore est optio minima porro nihil. Est inventore
+    et officia sapiente soluta qui. Praesentium sit ut neque doloremque.
+  collection: Collection
+  year: 2025
+  author: Paul M.

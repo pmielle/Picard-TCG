@@ -194,6 +194,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardData: {fileID: 0}
   name: {fileID: 3341103630299373442}
+  price: {fileID: 7684306052564825965}
+  quote: {fileID: 5815537840257766401}
+  review: {fileID: 4599983663500461688}
+  collection: {fileID: 7835846610274334190}
+  year: {fileID: 8433509266962987989}
+  author: {fileID: 4851707089486485276}
 --- !u!1 &4599983663500461688
 GameObject:
   m_ObjectHideFlags: 0
