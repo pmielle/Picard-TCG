@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7808c373b2b46e6af94ae3dfac9f22, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
+  id: 1
   name: Carte 1
   price: 9.99
   quote: Review quote
@@ -20,3 +21,4 @@ MonoBehaviour:
   collection: Collection
   year: 2025
   author: Paul M.
+  type: 0
