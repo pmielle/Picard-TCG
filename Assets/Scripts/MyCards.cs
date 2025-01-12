@@ -58,10 +58,10 @@ public class MyCards : MonoBehaviour
 
     void spawn(int cardId, int stackCount, Object card, GameObject content)
     {
-        Debug.Log($"stack count is {stackCount}");
         var cardData = Resources.Load<CardData>(cardId.ToString());
         var clone = Instantiate(card, content.transform);
         clone.GetComponent<Card>().cardData = cardData;
+        clone.GetComponent<CardInList>().stackCount = stackCount;
         clone.GetComponent<Button>().onClick.AddListener(() => GoToCard(cardId));
     }
 
