@@ -17,4 +17,9 @@ public class MainMenu : MonoBehaviour
     { 
         SceneManager.LoadScene("OpenPack"); 
     }
+
+    public void DeleteSaveData()
+    {
+        GameObject.Find("Player").GetComponent<Player>().DeleteSaveData();
+    }
 }

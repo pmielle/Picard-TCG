@@ -49,4 +49,10 @@ public class Player : MonoBehaviour
         var saveData = JsonUtility.FromJson<SaveData>(jsonData);
         cards = saveData.cards;
     }
+
+    public void DeleteSaveData()
+    {
+        File.Delete(saveFile);
+    }
+
 }
