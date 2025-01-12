@@ -40,14 +40,12 @@ public class Player : MonoBehaviour
     {
         SaveData saveData = new(cards);
         string jsonData = JsonUtility.ToJson(saveData);
-        Debug.Log($"writing {jsonData} to {saveFile}");
         File.WriteAllText(saveFile, jsonData);
     }
 
     void Load()
     {
         string jsonData = File.ReadAllText(saveFile);
-        Debug.Log($"read {jsonData} from {saveFile}");
         var saveData = JsonUtility.FromJson<SaveData>(jsonData);
         cards = saveData.cards;
     }
