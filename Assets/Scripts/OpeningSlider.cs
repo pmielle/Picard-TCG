@@ -19,6 +19,7 @@ public class OpeningSlider : MonoBehaviour, IPointerUpHandler
             // give the new cards to the player
             var player = GameObject.Find("Player").GetComponent<Player>();  
             player.cards.AddRange(pack.GetComponent<PackDisplay>().cardIds);
+            player.Save();
         }
     }
 
